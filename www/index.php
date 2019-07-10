@@ -16,7 +16,7 @@
     <?php
 
     // Connexion et sélection de la base
-    $conn = mysqli_connect('db', 'user', 'test', "myDb-v1");
+    $conn = mysqli_connect('db', 'user', 'test', "myDb");
 
 
     $query = 'SELECT * From Mahasiswa';
