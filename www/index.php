@@ -37,9 +37,9 @@
         echo '<td>' . $element['nama'] . '</td>';
         
         echo '<td>'.
-                '<a href="read.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-search"></span></a>&nbsp;&nbsp;'.
-                '<a href="update.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;&nbsp;'.
-                '<a href="delete.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-trash"></span></a>'.
+                '<a href="read.php?nim='.$element['nim'].'"><span class="glyphicon glyphicon-search"></span></a>&nbsp;&nbsp;'.
+                '<a href="update.php?nim='.$element['nim'].'"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;&nbsp;'.
+                '<a href="delete.php?nim='.$element['nim'].'"><span class="glyphicon glyphicon-trash"></span></a>'.
             '</td>';
         
         echo '</tr>';

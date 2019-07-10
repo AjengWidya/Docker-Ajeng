@@ -6,7 +6,7 @@
     $query = "SELECT * FROM Mahasiswa WHERE nim = '$nim'";
     $result = mysqli_query($conn, $query);
 
-    $data = myssqli_fetch_assoc($result);
+    $data = mysqli_fetch_assoc($result);
     $nim = $data["nim"];
     $nama = $data["nama"];
     $gender = $data["gender"];
