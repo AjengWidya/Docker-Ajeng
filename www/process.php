@@ -6,7 +6,7 @@
     $gender = $_POST['gender'];
     $prodi = $_POST['prodi'];
 
-    if($proses == "update") {
+    if($proses == "Update") {
        $query = "UPDATE Mahasiswa SET
                 nama = '$nama',
                 gender = '$gender',
@@ -23,5 +23,9 @@
     }
     $result = mysqli_query($conn, $query);
 
-    if($result) header('location: index.php');
+    if($result){
+        header('location: index.php');
+    } else {
+        echo mysqli_error($conn);
+    }
 ?>
