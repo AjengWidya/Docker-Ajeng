@@ -1,13 +1,7 @@
 <?php
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
-
-    if(isset($_POST['nim'])) {
-        $nim = $_POST['nim'];
-        $proses = "update";
-    } else {
-        $proses = "simpan";
-    }
-
+    $proses = $_POST['proses'];
+    $nim = $_POST['nim'];
     $nama = $_POST['nama'];
     $gender = $_POST['gender'];
     $prodi = $_POST['prodi'];
