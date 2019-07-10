@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-    <h1>Hi! I'm happy</h1>
+    <h1>Daftar Mahasiswa</h1>
 
     <?php
 

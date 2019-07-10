@@ -16,7 +16,7 @@
     $gender = $_POST['gender'];
     $prodi = $_POST['prodi'];
 
-    $conn = mysqli_connect('db', 'user', 'test', "myDb-v1");
+    $conn = mysqli_connect('db', 'user', 'test', "myDb");
 
     $query = 'INSERT INTO Mahasiswa SET
                 nim = "nim",
