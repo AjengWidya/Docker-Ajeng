@@ -29,12 +29,7 @@
         <h1>Tambah Data</h1>
 
         <form class="form-horizontal" action="process.php" method="post">
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="nim">NIM:</label>
-                <div class="col-sm-10">
-                <input type="text" class="form-control" name="nim" value="<?php echo $nim;?>" readonly="on">
-                </div>
-            </div>
+            <input type="hidden" name="nim" value="<?php echo $nim;?>"/>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nama">Nama Lengkap:</label>
                 <div class="col-sm-10">
@@ -60,7 +55,7 @@
             </div> 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <input type="submit" class="btn btn-info" value="Update" name="update"/>
+                <input type="submit" class="btn btn-info" value="Update">
                 </div>
             </div>
         </form> 
