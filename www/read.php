@@ -28,6 +28,7 @@
         <h1>Detail Mahasiswa</h1>
 
         <table class="table table-condensed">
+        <tbody>
             <tr>
                 <td>NIM</td>
                 <td><?php echo $nim;?></td>
@@ -44,6 +45,7 @@
                 <td>Program Studi</td>
                 <td><?php echo $prodi;?></td>
             </tr>
+        </tbody>
         </table>
 
         <a href='index.php'><button type="button" class="btn btn-info">Kembali</button></a>
