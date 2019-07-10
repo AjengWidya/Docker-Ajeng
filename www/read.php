@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('db', 'user', 'test', "myDb");
+    $conn = mysqli_connect('db', 'user', 'test', "akademikDb");
     
     $nim = $_GET['nim'];
 
