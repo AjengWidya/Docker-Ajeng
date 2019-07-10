@@ -11,15 +11,15 @@
 </head>
 <body>
     <div class="container">
-    <?php echo "<h1>Hi! I'm happy</h1>"; ?>
+    <h1>Hi! I'm happy</h1>
 
     <?php
 
     // Connexion et sélection de la base
-    $conn = mysqli_connect('db', 'user', 'test', "myDb");
+    $conn = mysqli_connect('db', 'user', 'test', "myDb-v1");
 
 
-    $query = 'SELECT * From Person';
+    $query = 'SELECT * From Mahasiswa';
     $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';
@@ -36,11 +36,11 @@
         foreach($value as $element){
             echo '<td>' . $element . '</td>';
         }
-        echo '<td>
-                <a href="read.php"><span class="glyphicon glyphicon-search"></span></a>
-                <a href="update.php"><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="delete.php"><span class="glyphicon glyphicon-trash"></span></a>
-            </td>';
+        echo '<td>'.
+                '<a href="read.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-search"></span></a>'.
+                '<a href="update.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-pencil"></span></a>'.
+                '<a href="delete.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-trash"></span></a>'.
+            '</td>';
         
         echo '</tr>';
     }
@@ -52,6 +52,8 @@
     mysqli_close($conn);
 
     ?>
+
+    <a href='create.php'><button type="button" class="btn btn-info">Tambah Data</button></a>
     </div>
 </body>
 </html>
