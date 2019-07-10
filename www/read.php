@@ -25,7 +25,9 @@
 </head>
 <body>
     <div class="container">
-        <table>
+        <h1>Detail Mahasiswa</h1>
+
+        <table class="table table-condensed">
             <tr>
                 <td>NIM</td>
                 <td><?php echo $nim;?></td>
