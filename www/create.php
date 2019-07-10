@@ -26,7 +26,7 @@
              ';
     $result = mysqli_query($conn, $query);
     if($result) {
-        header("location:index.php");
+        header('location: index.php');
     }
 ?>
 
