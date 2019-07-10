@@ -43,7 +43,7 @@
     <div class='container'>
         <h1>Tambah Data</h1>
 
-        <form class="form-horizontal" action="#" method="post">
+        <form class="form-horizontal" action="update.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nim">NIM:</label>
                 <div class="col-sm-10">

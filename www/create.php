@@ -11,22 +11,24 @@
 </head>
 
 <?php
-    $nim = $_POST['nim'];
-    $nama = $_POST['nama'];
-    $gender = $_POST['gender'];
-    $prodi = $_POST['prodi'];
-
-    $conn = mysqli_connect('db', 'user', 'test', "myDb");
-
-    $query = 'INSERT INTO Mahasiswa SET
-                nim = "nim",
-                nama = "$nama",
-                gender = "$gender",
-                prodi = "$prodi"
-             ';
-    $result = mysqli_query($conn, $query);
-    if($result) {
-        header('location: index.php');
+    if($_POST['simpan']) {
+        $nim = $_POST['nim'];
+        $nama = $_POST['nama'];
+        $gender = $_POST['gender'];
+        $prodi = $_POST['prodi'];
+    
+        $conn = mysqli_connect('db', 'user', 'test', "myDb");
+    
+        $query = 'INSERT INTO Mahasiswa SET
+                    nim = "$nim",
+                    nama = "$nama",
+                    gender = "$gender",
+                    prodi = "$prodi"
+                 ';
+        $result = mysqli_query($conn, $query);
+        if($result) {
+            header('location: index.php');
+        }
     }
 ?>
 
@@ -34,7 +36,7 @@
     <div class='container'>
         <h1>Tambah Data</h1>
 
-        <form class="form-horizontal" action="#" method="post">
+        <form class="form-horizontal" action="create.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nim">NIM:</label>
                 <div class="col-sm-10">
@@ -66,7 +68,7 @@
             </div> 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" class="btn btn-info" value="simpan">Submit</button>
                 </div>
             </div>
         </form> 
