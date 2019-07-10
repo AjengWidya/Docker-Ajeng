@@ -3,7 +3,7 @@
     
     $nim = $_GET['nim'];
 
-    $query = 'SELECT * FROM Mahasiswa WHERE nim = "$nim"';
+    $query = "SELECT * FROM Mahasiswa WHERE nim = '$nim'";
     $result = mysqli_query($conn, $query);
 
     $data = myssqli_fetch_assoc($result);

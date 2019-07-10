@@ -14,25 +14,10 @@
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
 
     $nim = $_GET['nim'];
-    
-    if($_POST['update']) {
-        $query = 'UPDATE Mahasiswa SET
-                    nama = "$nama",
-                    gender = "$gender",
-                    prodi = "$prodi"
-                    WHERE nim = "$nim"
-                 ';
-        $result = mysqli_query($conn, $query);
-        if($result) {
-            header('location: index.php');
-        }
-    } else {
-        $query = 'SELECT * FROM Mahasiswa WHERE nim = "$nim"';
-    }
-
+    $query = "SELECT * FROM Mahasiswa WHERE nim = '$nim'";
     $result = mysqli_query($conn, $query);
+    
     $data = mysqli_fetch_assoc($result);
-    $nim = $data["nim"];
     $nama = $data["nama"];
     $gender = $data["gender"];
     $prodi = $data["prodi"];
@@ -43,11 +28,11 @@
     <div class='container'>
         <h1>Tambah Data</h1>
 
-        <form class="form-horizontal" action="update.php" method="post">
+        <form class="form-horizontal" action="proses.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nim">NIM:</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control" name="nim" value="<?php echo $nim;?>">
+                <input type="text" class="form-control" name="nim" value="<?php echo $nim;?>" readonly="on">
                 </div>
             </div>
             <div class="form-group">
