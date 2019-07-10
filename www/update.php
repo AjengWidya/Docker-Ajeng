@@ -11,7 +11,7 @@
 </head>
 
 <?php
-    $conn = mysqli_connect('db', 'user', 'test', "akademikDb");
+    $conn = mysqli_connect('db', 'user', 'test', 'akademikDb');
 
     $nim = $_GET['nim'];
     $query = "SELECT * FROM Mahasiswa WHERE nim = '$nim'";

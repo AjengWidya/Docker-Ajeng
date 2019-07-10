@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('db', 'user', 'test', "akademikDb");
+    $conn = mysqli_connect('db', 'user', 'test', 'akademikDb');
     $proses = $_POST['proses'];
     $nim = $_POST['nim'];
     $nama = $_POST['nama'];
