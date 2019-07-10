@@ -30,12 +30,12 @@
                 <th>Aksi</th>
             </tr>
         </thead>';
-    while($value = $result->fetch_array(MYSQLI_ASSOC)){
+    while($element = mysqli_fetch_assoc($result)){
         echo '<tr>';
 
-        foreach($value as $element){
-            echo '<td>' . $element . '</td>';
-        }
+        echo '<td>' . $element['nim'] . '</td>';
+        echo '<td>' . $element['nama'] . '</td>';
+        
         echo '<td>'.
                 '<a href="read.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-search"></span></a>'.
                 '<a href="update.php?id='.$element['nim'].'"><span class="glyphicon glyphicon-pencil"></span></a>'.
