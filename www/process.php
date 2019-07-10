@@ -18,7 +18,7 @@
                 nim = '$nim',
                 nama = '$nama',
                 gender = '$gender',
-                prodi = '$prodi',
+                prodi = '$prodi'
                 ";
     }
     $result = mysqli_query($conn, $query);
