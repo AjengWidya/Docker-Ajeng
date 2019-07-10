@@ -23,14 +23,25 @@
     $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';
-    echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
+    echo '<thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>';
     while($value = $result->fetch_array(MYSQLI_ASSOC)){
         echo '<tr>';
-        echo '<td><a href="#"><span class="glyphicon glyphicon-search"></span></a></td>';
+
         foreach($value as $element){
             echo '<td>' . $element . '</td>';
         }
-
+        echo '<td>
+                <a href="read.php"><span class="glyphicon glyphicon-search"></span></a>
+                <a href="update.php"><span class="glyphicon glyphicon-pencil"></span></a>
+                <a href="delete.php"><span class="glyphicon glyphicon-trash"></span></a>
+            </td>';
+        
         echo '</tr>';
     }
     echo '</table>';

@@ -8,16 +8,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 
-CREATE TABLE `Person` (
-  `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL
+CREATE TABLE `Mahasiswa` (
+  `nim` varchar(10) NOT NULL PRIMARY KEY,
+  `nama` varchar(50) NOT NULL,
+  `gender` varchar(20) NOT NULL,
+  `prodi` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-INSERT INTO `Person` (`id`, `name`) VALUES
-(1, 'William'),
-(2, 'Marc'),
-(3, 'John');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
