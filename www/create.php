@@ -48,14 +48,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="sel1">Jenis Kelamin:</label>
+                <label class="control-label col-sm-2" for="sel1">Jenis Kelamin:</label>
                 <select class="form-control" name="gender">
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="sel2">Program Studi:</label>
+                <label class="control-label col-sm-2" for="sel2">Program Studi:</label>
                 <select class="form-control" name="prodi">
                     <option value="Teknik Informatika">Teknik Informatika</option>
                     <option value="Sistem Informasi">Sistem Informasi</option>
